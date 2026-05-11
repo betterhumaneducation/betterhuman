@@ -109,7 +109,9 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(160deg, #2c3e2d 0%, #1a2a1c 50%, #0d1a0e 100%);
-      /* ↓ REEMPLAZA con tu foto: background-image: url('TU_FOTO.jpg'); background-size: cover; background-position: center; */
+      background-image: url('../img/hero_home.png');
+      background-size: cover;
+      background-position: center;
     }
 
     .hero-photo::after {
@@ -119,21 +121,9 @@
       background: linear-gradient(to top, rgba(10, 14, 10, 0.82) 0%, rgba(10, 14, 10, 0.3) 55%, rgba(10, 14, 10, 0.1) 100%);
     }
 
-    /* Foto placeholder label */
+    /* Foto placeholder label - REMOVED */
     .hero-photo::before {
-      content: '[ FOTO IMPACTANTE AQUÍ — niños / jóvenes / comunidad ]';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: rgba(255, 255, 255, 0.18);
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      text-align: center;
-      pointer-events: none;
-      z-index: 1;
+      display: none;
     }
 
     .hero-content {
@@ -326,21 +316,14 @@
       width: 100%;
       aspect-ratio: 4/5;
       background: linear-gradient(135deg, #2c3e2d 0%, #1a2a1c 100%);
-      /* ↓ REEMPLAZA: background-image: url('foto2.jpg'); background-size: cover; */
+      background-image: url('../img/about_foundation.png');
+      background-size: cover;
       position: relative;
       overflow: hidden;
     }
 
     .photo-frame::before {
-      content: '[ FOTO AQUÍ ]';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: rgba(255, 255, 255, 0.2);
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+      display: none;
     }
 
     .photo-accent {
@@ -730,7 +713,9 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(120deg, #1a2c1e 0%, #0d1a0e 60%, #1a1a18 100%);
-    /* ↓ REEMPLAZA: background-image: url('historia.jpg'); background-size: cover; background-position: center; */
+    background-image: url('../img/history_archive.png');
+    background-size: cover;
+    background-position: center;
   }
 
   .page-hero-bg::after {
@@ -741,17 +726,7 @@
   }
 
   .page-hero-bg::before {
-    content: '[ FOTO HISTÓRICA / ARCHIVO FUNDACIÓN ]';
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
-    color: rgba(255,255,255,0.1);
-    font-family: var(--sans);
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    z-index: 1;
+    display: none;
   }
 
   .page-hero-content {
@@ -1226,6 +1201,9 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(120deg, #1a1a18 0%, #0d1a0e 60%, #1a2c1e 100%);
+    background-image: url('../img/transparency_hero.png');
+    background-size: cover;
+    background-position: center;
   }
 
   .page-hero-bg::after {
@@ -1736,7 +1714,9 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(160deg, #1a2c1e 0%, #0d1a10 50%, #0a0d0a 100%);
-    /* ↓ REEMPLAZA: background-image: url('mision.jpg'); background-size: cover; background-position: center; */
+    background-image: url('../img/mission_impact.png');
+    background-size: cover;
+    background-position: center;
   }
 
   .hero-bg::after {
@@ -1747,17 +1727,7 @@
   }
 
   .hero-bg::before {
-    content: '[ FOTO MÁS IMPACTANTE DE LA FUNDACIÓN ]';
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255,255,255,0.1);
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    z-index: 1;
-    white-space: nowrap;
+    display: none;
   }
 
   .hero-content {
@@ -2003,22 +1973,13 @@
 
   .photo-main {
     background: linear-gradient(135deg, #2c3e2d, #1a2a1c);
+    background-image: url('../img/hero_home.png');
+    background-size: cover;
     position: relative;
-    /* ↓ REEMPLAZA: background-image: url('foto_impacto.jpg'); background-size: cover; */
   }
 
   .photo-main::before {
-    content: '[ FOTO PRINCIPAL — Niños aprendiendo / momentos de impacto ]';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255,255,255,0.12);
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    text-align: center;
-    width: 200px;
+    display: none;
   }
 
   .photo-aside {
@@ -2393,22 +2354,15 @@
   .full-photo {
     height: 520px;
     background: linear-gradient(135deg, #2c3e2d 0%, #1a2a1c 100%);
+    background-image: url('../img/vision_future.png');
+    background-size: cover;
+    background-position: center top;
     position: relative;
     overflow: hidden;
-    /* ↓ REEMPLAZA: background-image: url('vision.jpg'); background-size: cover; background-position: center top; */
   }
 
   .full-photo::before {
-    content: '[ FOTO ASPIRACIONAL — Jóvenes graduados / momentos de logro / futuro ]';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255,255,255,0.1);
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    white-space: nowrap;
+    display: none;
   }
 
   .full-photo::after {
