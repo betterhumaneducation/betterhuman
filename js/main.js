@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Seleccionamos automáticamente qué elementos van a tener este efecto de lujo
   const elementsToReveal = document.querySelectorAll(
-    'p, h2, h3, .program-card, .photo-frame, .pillar-card, .gallery-cell, .photo-row-cell, .ms-box, .stat, .timeline-item'
+    '.program-card, .photo-frame, .pillar-card, .gallery-cell, .photo-row-cell, .ms-box, .stat, .timeline-item, .hero-content, .vision-statement'
   );
 
   // Aplicamos la clase base y un retraso dinámico (stagger) para que aparezcan en cascada
@@ -41,4 +41,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   elementsToReveal.forEach(el => observer.observe(el));
+
+  // 4. Scroll to Top button
+  const scrollTopBtn = document.getElementById('scrollToTop');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('show');
+      } else {
+        scrollTopBtn.classList.remove('show');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 });

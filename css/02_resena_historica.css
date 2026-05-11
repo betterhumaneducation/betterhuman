@@ -272,37 +272,40 @@
     display: grid;
     grid-template-columns: 1fr 60px 1fr;
     gap: 0;
-    margin-bottom: 60px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s, transform 0.6s;
+    margin-bottom: 120px;
+    align-items: start;
   }
 
-  .timeline-item.visible { opacity: 1; transform: translateY(0); }
 
-  .timeline-item:nth-child(odd) .tl-content { grid-column: 1; text-align: right; padding-right: 40px; }
+
+  .timeline-item > * {
+    grid-row: 1;
+  }
+
+  .timeline-item:nth-child(odd) .tl-content { grid-column: 1; text-align: right; padding-right: 25px; }
   .timeline-item:nth-child(odd) .tl-empty   { grid-column: 3; }
-  .timeline-item:nth-child(even) .tl-content { grid-column: 3; text-align: left; padding-left: 40px; order: 3; }
-  .timeline-item:nth-child(even) .tl-empty   { grid-column: 1; order: 1; }
+  .timeline-item:nth-child(even) .tl-content { grid-column: 3; text-align: left; padding-left: 25px; }
+  .timeline-item:nth-child(even) .tl-empty   { grid-column: 1; }
 
   .tl-dot {
     grid-column: 2;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding-top: 6px;
-    order: 2;
+    justify-content: center;
+    height: 2rem;
+    position: relative;
+    z-index: 2;
   }
 
   .tl-dot-inner {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background: var(--gold);
-    border: 3px solid var(--cream);
+    border: 4px solid var(--cream);
     outline: 1px solid var(--gold);
     flex-shrink: 0;
+    box-shadow: 0 0 0 4px rgba(184, 147, 90, 0.1);
   }
 
   .tl-year {
@@ -311,7 +314,7 @@
     font-weight: 300;
     color: var(--gold);
     line-height: 1;
-    margin-top: 0;
+    margin: 0 0 12px 0;
     display: block;
   }
 
@@ -332,6 +335,38 @@
 
   .tl-content { padding-top: 0; }
 
+  .tl-image {
+    margin-top: 24px;
+    display: inline-block;
+    padding: 10px;
+    background: var(--white);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border: 1px solid var(--stone);
+    border-radius: 2px;
+    transition: transform 0.4s ease;
+    max-width: 280px;
+  }
+
+  .tl-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: sepia(0.2) contrast(1.1);
+  }
+
+  .timeline-item:nth-child(odd) .tl-image {
+    transform: rotate(-2deg);
+  }
+
+  .timeline-item:nth-child(even) .tl-image {
+    transform: rotate(2deg);
+  }
+
+  .tl-image:hover {
+    transform: rotate(0) translateY(-5px);
+    box-shadow: 0 20px 45px rgba(184, 147, 90, 0.15);
+  }
+
   /* ── PHOTO ROW ── */
   .photo-row {
     display: grid;
@@ -344,22 +379,23 @@
   .photo-row-cell {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #2c3e2d, #1a2a1c);
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.5s ease;
   }
 
-  .photo-row-cell:nth-child(2) { background: linear-gradient(135deg, #3a2c1a, #2a1c0a); }
-  .photo-row-cell:nth-child(3) { background: linear-gradient(135deg, #1a2c3a, #0a1c2a); }
+  .photo-row-cell:nth-child(1) { 
+    background-image: url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=800'); 
+  }
+  .photo-row-cell:nth-child(2) { 
+    background-image: url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800'); 
+  }
+  .photo-row-cell:nth-child(3) { 
+    background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800'); 
+  }
 
   .photo-row-cell::before {
-    content: '[ FOTO AQUÍ ]';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255,255,255,0.12);
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    display: none;
   }
 
   /* ── MILESTONE CALLOUT ── */
@@ -465,6 +501,48 @@
   .social-icon svg {
     width: 20px;
     height: 20px;
+    fill: currentColor;
+  }
+
+  /* ── SCROLL TO TOP ── */
+  .scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--ink);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s, background 0.3s;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+
+  .scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .scroll-to-top:hover {
+    background: var(--white);
+    color: var(--gold);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(184, 147, 90, 0.4);
+  }
+
+  .scroll-to-top svg {
+    width: 24px;
+    height: 24px;
     fill: currentColor;
   }
 
