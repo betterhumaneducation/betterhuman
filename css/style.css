@@ -1212,47 +1212,33 @@
     }
   }
 
-  /* ── PAGE HERO (horizontal split) ── */
+  /* ── PAGE HERO ── */
   .page-hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 65vh;
-  }
-
-  .hero-left {
-    background: var(--ink);
-    padding: 80px 7vw 80px 7vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .hero-right {
-    background: linear-gradient(135deg, #2c3e2d 0%, #1a2a1c 100%);
     position: relative;
+    height: 70vh;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
     overflow: hidden;
-    /* ↓ REEMPLAZA: background-image: url('foto_alianzas.jpg'); background-size: cover; background-position: center; */
   }
 
-  .hero-right::before {
-    content: '[ FOTO IMPACTANTE AQUÍ\A — Equipo / Convenios / Sede ]';
-    white-space: pre;
+  .page-hero-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255,255,255,0.12);
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    text-align: center;
+    inset: 0;
+    background: linear-gradient(120deg, #1a1a18 0%, #0d1a0e 60%, #1a2c1e 100%);
   }
 
-  .hero-right::after {
+  .page-hero-bg::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(26,26,24,0.5) 0%, transparent 60%);
+    background: linear-gradient(to right, rgba(10,14,10,0.9) 30%, rgba(10,14,10,0.2) 100%);
+  }
+
+  .page-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 7vw;
   }
 
   .page-eyebrow {
@@ -1278,10 +1264,11 @@
 
   .page-title {
     font-family: var(--serif);
-    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    font-size: clamp(2.2rem, 5.5vw, 4.5rem);
     font-weight: 300;
     color: var(--white);
     line-height: 1.1;
+    max-width: 650px;
     opacity: 0;
     animation: fadeIn 0.8s 0.4s ease forwards;
   }
@@ -1290,9 +1277,9 @@
 
   .page-subtitle {
     margin-top: 22px;
-    font-size: 0.98rem;
-    color: rgba(255,255,255,0.5);
-    max-width: 400px;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    max-width: 480px;
     line-height: 1.7;
     opacity: 0;
     animation: fadeIn 0.8s 0.6s ease forwards;
