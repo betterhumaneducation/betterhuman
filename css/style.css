@@ -880,13 +880,10 @@
     display: grid;
     grid-template-columns: 1fr 60px 1fr;
     gap: 0;
-    margin-bottom: 60px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s, transform 0.6s;
+    margin-bottom: 120px;
   }
 
-  .timeline-item.visible { opacity: 1; transform: translateY(0); }
+
 
   .timeline-item:nth-child(odd) .tl-content { grid-column: 1; text-align: right; padding-right: 40px; }
   .timeline-item:nth-child(odd) .tl-empty   { grid-column: 3; }
@@ -940,6 +937,38 @@
 
   .tl-content { padding-top: 0; }
 
+  .tl-image {
+    margin-top: 24px;
+    display: inline-block;
+    padding: 10px;
+    background: var(--white);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border: 1px solid var(--stone);
+    border-radius: 2px;
+    transition: transform 0.4s ease;
+    max-width: 280px;
+  }
+
+  .tl-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: sepia(0.2) contrast(1.1);
+  }
+
+  .timeline-item:nth-child(odd) .tl-image {
+    transform: rotate(-2deg);
+  }
+
+  .timeline-item:nth-child(even) .tl-image {
+    transform: rotate(2deg);
+  }
+
+  .tl-image:hover {
+    transform: rotate(0) translateY(-5px);
+    box-shadow: 0 20px 45px rgba(184, 147, 90, 0.15);
+  }
+
   /* ── PHOTO ROW ── */
   .photo-row {
     display: grid;
@@ -952,22 +981,23 @@
   .photo-row-cell {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #2c3e2d, #1a2a1c);
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.5s ease;
   }
 
-  .photo-row-cell:nth-child(2) { background: linear-gradient(135deg, #3a2c1a, #2a1c0a); }
-  .photo-row-cell:nth-child(3) { background: linear-gradient(135deg, #1a2c3a, #0a1c2a); }
+  .photo-row-cell:nth-child(1) { 
+    background-image: url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=800'); 
+  }
+  .photo-row-cell:nth-child(2) { 
+    background-image: url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800'); 
+  }
+  .photo-row-cell:nth-child(3) { 
+    background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800'); 
+  }
 
   .photo-row-cell::before {
-    content: '[ FOTO AQUÍ ]';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255,255,255,0.12);
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    display: none;
   }
 
   /* ── MILESTONE CALLOUT ── */

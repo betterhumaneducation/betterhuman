@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Seleccionamos automáticamente qué elementos van a tener este efecto de lujo
   const elementsToReveal = document.querySelectorAll(
-    'p, h2, h3, .program-card, .photo-frame, .pillar-card, .gallery-cell, .photo-row-cell, .ms-box, .stat'
+    'p, h2, h3, .program-card, .photo-frame, .pillar-card, .gallery-cell, .photo-row-cell, .ms-box, .stat, .timeline-item'
   );
 
   // Aplicamos la clase base y un retraso dinámico (stagger) para que aparezcan en cascada
@@ -27,16 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 3. Creamos el observador: cuando el usuario hace scroll y ve el elemento, ¡lo animamos!
-  const observer = new IntersectionObserver((entries, obs) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('ux-visible');
-        obs.unobserve(entry.target); // Solo se anima la primera vez
+      } else {
+        entry.target.classList.remove('ux-visible');
       }
     });
   }, {
-    threshold: 0.15,
-    rootMargin: "0px 0px -50px 0px"
+    threshold: 0.1,
+    rootMargin: "0px 0px -10% 0px"
   });
 
   elementsToReveal.forEach(el => observer.observe(el));
