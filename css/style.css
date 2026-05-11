@@ -480,39 +480,37 @@
     }
 
     .gallery-cell {
-      background: linear-gradient(135deg, #2c3e2d, #1a2a1c);
       position: relative;
       overflow: hidden;
       cursor: pointer;
-      transition: opacity 0.3s;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
     }
 
     .gallery-cell:hover {
-      opacity: 0.85;
+      transform: scale(1.05);
+      z-index: 2;
     }
 
     .gallery-cell::before {
-      content: '[ FOTO ]';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: rgba(255, 255, 255, 0.15);
-      font-size: 0.6rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+      display: none;
+    }
+
+    .gallery-cell:nth-child(1) {
+      background-image: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800');
     }
 
     .gallery-cell:nth-child(2) {
-      background: linear-gradient(135deg, #3a2c1a, #2a1c0a);
+      background-image: url('https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&q=80&w=800');
     }
 
     .gallery-cell:nth-child(3) {
-      background: linear-gradient(135deg, #1a2a3a, #0a1c2a);
+      background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800');
     }
 
     .gallery-cell:nth-child(4) {
-      background: linear-gradient(135deg, #2a1a2a, #1a0a1a);
+      background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800');
     }
 
     /* ── FOOTER ── */
