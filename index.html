@@ -10,6 +10,10 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gallery-cell:hover img { transform: scale(1.05); }
+    .hero-cta:hover { background: #b8935a; color: #1a1a18; }
+  </style>
 </head>
 
 <body>
@@ -27,17 +31,17 @@
   </header>
 
   <!-- ══ HERO ══ -->
-  <section class="hero">
-    <div class="hero-photo"></div>
-    <div class="hero-content">
-      <div class="hero-eyebrow">Bogotá, Colombia · Desde 2002</div>
-      <h1 class="hero-title">
-        Transformando vidas a través de la <em>educación integral</em>
+  <section class="hero" style="position:relative;height:100vh;min-height:620px;overflow:hidden;background:#1a1a18;">
+    <img src="img/1%20Inicio/11.jpg" alt="Better Human Education" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div class="hero-content" style="position:absolute;bottom:0;left:0;right:0;padding:0 7vw 7vh;z-index:2;color:white;">
+      <div class="hero-eyebrow" style="display:inline-flex;align-items:center;gap:14px;color:#d4af7a;font-family:'Jost',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:20px;">Bogotá, Colombia · Desde 2002</div>
+      <h1 class="hero-title" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:300;line-height:1.08;letter-spacing:-0.01em;max-width:760px;margin-bottom:22px;">
+        Transformando vidas a través de la <em style="font-style:italic;color:#d4af7a;">educación integral</em>
       </h1>
-      <p class="hero-subtitle">
+      <p class="hero-subtitle" style="font-size:1.05rem;color:rgba(255,255,255,0.65);max-width:480px;margin-bottom:36px;">
         24 años acompañando a niños, niñas y jóvenes hacia un futuro con propósito, oportunidad y dignidad.
       </p>
-      <a href="#sobre-nosotros" class="hero-cta">Conocer la fundación</a>
+      <a href="#sobre-nosotros" class="hero-cta" style="display:inline-block;padding:14px 38px;border:1px solid #b8935a;color:#d4af7a;font-family:'Jost',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;">Conocer la fundación</a>
     </div>
   </section>
 
@@ -78,10 +82,12 @@
         República de Colombia.
       </p>
     </div>
-    <div class="about-photo-block">
-      <div class="photo-frame"></div>
-      <div class="photo-accent"></div>
-      <div class="photo-badge">
+    <div class="about-photo-block" style="position:relative;">
+      <div class="photo-frame" style="width:100%;aspect-ratio:4/5;overflow:hidden;background:#2c3e2d;">
+        <img src="img/1 Inicio/2.jpg" alt="" style="width:100%;height:100%;object-fit:contain;display:block;">
+      </div>
+      <div class="photo-accent" style="position:absolute;bottom:-20px;right:-20px;width:120px;height:120px;border:1px solid #b8935a;opacity:0.4;z-index:-1;"></div>
+      <div class="photo-badge" style="position:absolute;bottom:24px;left:-24px;background:#b8935a;color:#1a1a18;padding:16px 22px;font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-weight:600;line-height:1.2;max-width:180px;">
         Mención Honorífica<br>Antonia Santos<br>Congreso de la República
       </div>
     </div>
@@ -116,11 +122,11 @@
   </section>
 
   <!-- ══ GALLERY STRIP ══ -->
-  <div class="gallery-strip">
-    <div class="gallery-cell"></div>
-    <div class="gallery-cell"></div>
-    <div class="gallery-cell"></div>
-    <div class="gallery-cell"></div>
+  <div class="gallery-strip" style="display:grid;grid-template-columns:repeat(4,1fr);height:320px;gap:3px;">
+    <div class="gallery-cell" style="overflow:hidden;"><img src="img/1 Inicio/4..png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;"></div>
+    <div class="gallery-cell" style="overflow:hidden;"><img src="img/1 Inicio/5..png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;"></div>
+    <div class="gallery-cell" style="overflow:hidden;"><img src="img/1 Inicio/6.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;"></div>
+    <div class="gallery-cell" style="overflow:hidden;"><img src="img/1%20Inicio/11.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;"></div>
   </div>
 
   <!-- ══ QUOTE ══ -->
