@@ -104,7 +104,9 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(160deg, #2c3e2d 0%, #1a2a1c 50%, #0d1a0e 100%);
-      /* ↓ REEMPLAZA con tu foto: background-image: url('TU_FOTO.jpg'); background-size: cover; background-position: center; */
+      background-image: url('../img/1%20Inicio/2.jpg');
+      background-size: cover;
+      background-position: center;
     }
 
     .hero-photo::after {
@@ -116,19 +118,7 @@
 
     /* Foto placeholder label */
     .hero-photo::before {
-      content: '[ FOTO IMPACTANTE AQUÍ — niños / jóvenes / comunidad ]';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: rgba(255, 255, 255, 0.18);
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      text-align: center;
-      pointer-events: none;
-      z-index: 1;
+      display: none;
     }
 
     .hero-content {
@@ -321,21 +311,14 @@
       width: 100%;
       aspect-ratio: 4/5;
       background: linear-gradient(135deg, #2c3e2d 0%, #1a2a1c 100%);
-      /* ↓ REEMPLAZA: background-image: url('foto2.jpg'); background-size: cover; */
+      background-image: url('../img/1%20Inicio/6.jpg');
+      background-size: cover;
       position: relative;
       overflow: hidden;
     }
 
     .photo-frame::before {
-      content: '[ FOTO AQUÍ ]';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: rgba(255, 255, 255, 0.2);
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+      display: none;
     }
 
     .photo-accent {
@@ -492,39 +475,37 @@
     }
 
     .gallery-cell {
-      background: linear-gradient(135deg, #2c3e2d, #1a2a1c);
       position: relative;
       overflow: hidden;
       cursor: pointer;
-      transition: opacity 0.3s;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
     }
 
     .gallery-cell:hover {
-      opacity: 0.85;
+      transform: scale(1.05);
+      z-index: 2;
     }
 
     .gallery-cell::before {
-      content: '[ FOTO ]';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: rgba(255, 255, 255, 0.15);
-      font-size: 0.6rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+      display: none;
+    }
+
+    .gallery-cell:nth-child(1) {
+      background-image: url('../img/1%20Inicio/2.jpg');
     }
 
     .gallery-cell:nth-child(2) {
-      background: linear-gradient(135deg, #3a2c1a, #2a1c0a);
+      background-image: url('../img/1%20Inicio/4..png');
     }
 
     .gallery-cell:nth-child(3) {
-      background: linear-gradient(135deg, #1a2a3a, #0a1c2a);
+      background-image: url('../img/1%20Inicio/5..png');
     }
 
     .gallery-cell:nth-child(4) {
-      background: linear-gradient(135deg, #2a1a2a, #1a0a1a);
+      background-image: url('../img/1%20Inicio/6.jpg');
     }
 
     /* ── FOOTER ── */

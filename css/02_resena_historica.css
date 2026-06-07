@@ -95,7 +95,7 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(120deg, #1a2c1e 0%, #0d1a0e 60%, #1a1a18 100%);
-    /* ↓ REEMPLAZA: background-image: url('historia.jpg'); background-size: cover; background-position: center; */
+    background-image: url('../img/2%20Resen%CC%83a%20Histo%CC%81rica/1.jpeg'); background-size: cover; background-position: center;
   }
 
   .page-hero-bg::after {
@@ -106,17 +106,7 @@
   }
 
   .page-hero-bg::before {
-    content: '[ FOTO HISTÓRICA / ARCHIVO FUNDACIÓN ]';
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    transform: translateY(-50%);
-    color: rgba(255,255,255,0.1);
-    font-family: var(--sans);
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    z-index: 1;
+    display: none;
   }
 
   .page-hero-content {
@@ -385,13 +375,13 @@
   }
 
   .photo-row-cell:nth-child(1) { 
-    background-image: url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=800'); 
+    background-image: url('../img/2%20Resen%CC%83a%20Histo%CC%81rica/WhatsApp%20Image%202026-05-28%20at%206.13.59%20PM-2%20copy.jpeg'); 
   }
   .photo-row-cell:nth-child(2) { 
-    background-image: url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800'); 
+    background-image: url('../img/2%20Resen%CC%83a%20Histo%CC%81rica/WhatsApp%20Image%202026-05-28%20at%206.35.22%20PM.jpeg'); 
   }
   .photo-row-cell:nth-child(3) { 
-    background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800'); 
+    background-image: url('../img/2%20Resen%CC%83a%20Histo%CC%81rica/WhatsApp%20Image%202026-05-28%20at%208.10.38%20PM.jpeg'); 
   }
 
   .photo-row-cell::before {

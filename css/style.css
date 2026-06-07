@@ -109,7 +109,7 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(160deg, #2c3e2d 0%, #1a2a1c 50%, #0d1a0e 100%);
-      background-image: url('../img/hero_home.png');
+      background-image: url('../img/1%20Inicio/2.jpg');
       background-size: cover;
       background-position: center;
     }
@@ -316,7 +316,7 @@
       width: 100%;
       aspect-ratio: 4/5;
       background: linear-gradient(135deg, #2c3e2d 0%, #1a2a1c 100%);
-      background-image: url('../img/about_foundation.png');
+      background-image: url('../img/1%20Inicio/6.jpg');
       background-size: cover;
       position: relative;
       overflow: hidden;
@@ -498,19 +498,19 @@
     }
 
     .gallery-cell:nth-child(1) {
-      background-image: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800');
+      background-image: url('../img/1%20Inicio/2.jpg');
     }
 
     .gallery-cell:nth-child(2) {
-      background-image: url('https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&q=80&w=800');
+      background-image: url('../img/1%20Inicio/4..png');
     }
 
     .gallery-cell:nth-child(3) {
-      background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800');
+      background-image: url('../img/1%20Inicio/5..png');
     }
 
     .gallery-cell:nth-child(4) {
-      background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=800');
+      background-image: url('../img/1%20Inicio/6.jpg');
     }
 
     /* ── FOOTER ── */
@@ -711,7 +711,7 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(120deg, #1a2c1e 0%, #0d1a0e 60%, #1a1a18 100%);
-    background-image: url('../img/history_archive.png');
+    background-image: url('../img/2%20Resen%CC%83a%20Histo%CC%81rica/1.jpeg');
     background-size: cover;
     background-position: center;
   }
@@ -992,13 +992,13 @@
   }
 
   .photo-row-cell:nth-child(1) { 
-    background-image: url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&q=80&w=800'); 
+    background-image: url('../img/2%20Resen%CC%83a%20Histo%CC%81rica/WhatsApp%20Image%202026-05-28%20at%206.13.59%20PM-2%20copy.jpeg'); 
   }
   .photo-row-cell:nth-child(2) { 
-    background-image: url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800'); 
+    background-image: url('../img/2%20Resen%CC%83a%20Histo%CC%81rica/WhatsApp%20Image%202026-05-28%20at%206.35.22%20PM.jpeg'); 
   }
   .photo-row-cell:nth-child(3) { 
-    background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800'); 
+    background-image: url('../img/2%20Resen%CC%83a%20Histo%CC%81rica/WhatsApp%20Image%202026-05-28%20at%208.10.38%20PM.jpeg'); 
   }
 
   .photo-row-cell::before {
@@ -1234,7 +1234,7 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(120deg, #1a1a18 0%, #0d1a0e 60%, #1a2c1e 100%);
-    background-image: url('../img/transparency_hero.png');
+    background-image: url('../img/Transparencia%20y%20Alianzas/Hitube_djVryJoLEk_2026_05_16_21_32_54.jpg');
     background-size: cover;
     background-position: center;
   }
@@ -1747,7 +1747,7 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(160deg, #1a2c1e 0%, #0d1a10 50%, #0a0d0a 100%);
-    background-image: url('../img/mission_impact.png');
+    background-image: url('../img/3%20Misio%CC%81n/1.jpg');
     background-size: cover;
     background-position: center;
   }
@@ -2005,7 +2005,7 @@
   }
 
   .photo-main {
-    background-image: url('../img/hero_home.png');
+    background-image: url('../img/3%20Misio%CC%81n/2.jpeg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -2027,8 +2027,8 @@
     position: relative;
   }
 
-  .photo-sm:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=80&w=600'); }
-  .photo-sm:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=600'); }
+  .photo-sm:nth-child(1) { background-image: url('../img/3%20Misio%CC%81n/3.jpg'); }
+  .photo-sm:nth-child(2) { background-image: url('../img/3%20Misio%CC%81n/4.jpg'); }
 
   .photo-sm::before {
     display: none;
@@ -2381,7 +2381,7 @@
   .full-photo {
     height: 520px;
     background: linear-gradient(135deg, #2c3e2d 0%, #1a2a1c 100%);
-    background-image: url('../img/vision_future.png');
+    background-image: url('../img/4%20Visio%CC%81n/1.jpg');
     background-size: cover;
     background-position: center top;
     position: relative;
@@ -2616,22 +2616,21 @@
   }
 
   .photo-pair-cell {
-    background: linear-gradient(135deg, #2c3e2d, #1a2a1c);
     position: relative;
+    background-size: cover;
+    background-position: center;
   }
 
-  .photo-pair-cell:nth-child(2) { background: linear-gradient(135deg, #3a2c1a, #2a1c0a); }
+  .photo-pair-cell:nth-child(1) {
+    background-image: url('../img/4%20Visio%CC%81n/2.jpg');
+  }
+
+  .photo-pair-cell:nth-child(2) {
+    background-image: url('../img/4%20Visio%CC%81n/4.jpeg');
+  }
 
   .photo-pair-cell::before {
-    content: '[ FOTO AQUÍ ]';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255,255,255,0.12);
-    font-size: 0.58rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    display: none;
   }
 
   /* ── CLOSING STATEMENT ── */

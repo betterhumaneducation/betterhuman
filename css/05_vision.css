@@ -175,20 +175,11 @@
     background: linear-gradient(135deg, #2c3e2d 0%, #1a2a1c 100%);
     position: relative;
     overflow: hidden;
-    /* ↓ REEMPLAZA: background-image: url('vision.jpg'); background-size: cover; background-position: center top; */
+    background-image: url('../img/4%20Visio%CC%81n/1.jpg'); background-size: cover; background-position: center top;
   }
 
   .full-photo::before {
-    content: '[ FOTO ASPIRACIONAL — Jóvenes graduados / momentos de logro / futuro ]';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255,255,255,0.1);
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    white-space: nowrap;
+    display: none;
   }
 
   .full-photo::after {
@@ -415,22 +406,21 @@
   }
 
   .photo-pair-cell {
-    background: linear-gradient(135deg, #2c3e2d, #1a2a1c);
     position: relative;
+    background-size: cover;
+    background-position: center;
   }
 
-  .photo-pair-cell:nth-child(2) { background: linear-gradient(135deg, #3a2c1a, #2a1c0a); }
+  .photo-pair-cell:nth-child(1) {
+    background-image: url('../img/4%20Visio%CC%81n/2.jpg');
+  }
+
+  .photo-pair-cell:nth-child(2) {
+    background-image: url('../img/4%20Visio%CC%81n/4.jpeg');
+  }
 
   .photo-pair-cell::before {
-    content: '[ FOTO AQUÍ ]';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255,255,255,0.12);
-    font-size: 0.58rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    display: none;
   }
 
   /* ── CLOSING STATEMENT ── */

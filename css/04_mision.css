@@ -97,7 +97,7 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(160deg, #1a2c1e 0%, #0d1a10 50%, #0a0d0a 100%);
-    /* ↓ REEMPLAZA: background-image: url('mision.jpg'); background-size: cover; background-position: center; */
+    background-image: url('../img/3%20Misio%CC%81n/1.jpg'); background-size: cover; background-position: center;
   }
 
   .hero-bg::after {
@@ -108,17 +108,7 @@
   }
 
   .hero-bg::before {
-    content: '[ FOTO MÁS IMPACTANTE DE LA FUNDACIÓN ]';
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255,255,255,0.1);
-    font-size: 0.6rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    z-index: 1;
-    white-space: nowrap;
+    display: none;
   }
 
   .hero-content {
@@ -363,7 +353,7 @@
   }
 
   .photo-main {
-    background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200');
+    background-image: url('../img/3%20Misio%CC%81n/2.jpeg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -385,8 +375,8 @@
     position: relative;
   }
 
-  .photo-sm:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&q=80&w=600'); }
-  .photo-sm:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=600'); }
+  .photo-sm:nth-child(1) { background-image: url('../img/3%20Misio%CC%81n/3.jpg'); }
+  .photo-sm:nth-child(2) { background-image: url('../img/3%20Misio%CC%81n/4.jpg'); }
 
   .photo-sm::before {
     display: none;

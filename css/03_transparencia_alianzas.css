@@ -100,21 +100,11 @@
     background: linear-gradient(135deg, #2c3e2d 0%, #1a2a1c 100%);
     position: relative;
     overflow: hidden;
-    /* ↓ REEMPLAZA: background-image: url('foto_alianzas.jpg'); background-size: cover; background-position: center; */
+    background-image: url('../img/Transparencia%20y%20Alianzas/Hitube_djVryJoLEk_2026_05_16_21_32_54.jpg'); background-size: cover; background-position: center;
   }
 
   .hero-right::before {
-    content: '[ FOTO IMPACTANTE AQUÍ\A — Equipo / Convenios / Sede ]';
-    white-space: pre;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255,255,255,0.12);
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    text-align: center;
+    display: none;
   }
 
   .hero-right::after {
