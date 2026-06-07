@@ -94,15 +94,17 @@
   .page-hero-bg {
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, #1a2c1e 0%, #0d1a0e 60%, #1a1a18 100%);
-    background-image: url('../img/2%20Resen%CC%83a%20Histo%CC%81rica/1.jpeg'); background-size: cover; background-position: center;
+    background-image: url('../img/2%20Resen%CC%83a%20Histo%CC%81rica/14.jpg');
+    background-size: cover;
+    background-position: center;
   }
 
   .page-hero-bg::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(10,14,10,0.85) 40%, rgba(10,14,10,0.3) 100%);
+    background: linear-gradient(120deg, #1a2c1e 0%, #0d1a0e 60%, #1a1a18 100%);
+    opacity: 0.3;
   }
 
   .page-hero-bg::before {
