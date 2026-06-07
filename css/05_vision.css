@@ -83,7 +83,10 @@
 
   /* ── MANIFESTO HERO ── */
   .manifesto-hero {
-    background: var(--ink);
+    background-color: var(--ink);
+    background-image: linear-gradient(160deg, #1a2c1e 0%, #0d1a10 50%, #0a0d0a 100%), url('../img/4%20Visio%CC%81n/3.jpg');
+    background-size: cover;
+    background-position: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -172,10 +175,11 @@
   /* ── FULL WIDTH PHOTO ── */
   .full-photo {
     height: 520px;
-    background: linear-gradient(135deg, #2c3e2d 0%, #1a2a1c 100%);
+    background-image: linear-gradient(135deg, #2c3e2d 0%, #1a2a1c 100%), url('../img/4%20Visio%CC%81n/1.jpg');
+    background-size: cover;
+    background-position: center top;
     position: relative;
     overflow: hidden;
-    background-image: url('../img/4%20Visio%CC%81n/1.jpg'); background-size: cover; background-position: center top;
   }
 
   .full-photo::before {
