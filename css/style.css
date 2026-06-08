@@ -724,14 +724,19 @@ body {
 
 @media (max-width: 768px) {
   .page-hero-bg {
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center top !important;
+    background-size: cover !important;
+    background-position: center center !important;
   }
 
   .page-hero-bg::after {
-    background: linear-gradient(180deg, transparent 60%, #0d1a0e 100%) !important;
+    background: linear-gradient(180deg, rgba(26, 44, 30, 0.6) 0%, rgba(13, 26, 14, 0.8) 60%, rgba(26, 26, 24, 0.9) 100%) !important;
     opacity: 1 !important;
+  }
+
+  .page-hero-content {
+    padding: 30px 24px;
+    border-radius: 0;
+    max-width: 100%;
   }
 }
 
@@ -3002,11 +3007,19 @@ body {
 
 .photo-pair-cell:nth-child(1) {
   background-image: url('../img/4%20Visio%CC%81n/3.jpg');
+  background-position: center 20%;
+
+
 }
 
 .photo-pair-cell:nth-child(2) {
   background-image: url('../img/4%20Visio%CC%81n/4.jpeg');
   background-position: center 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 

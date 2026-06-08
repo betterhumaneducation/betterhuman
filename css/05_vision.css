@@ -612,12 +612,72 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     .manifesto-hero::before { display: none; }
+
+    .manifesto-hero {
+      background-position: center center;
+      background-size: cover;
+      min-height: 80vh;
+      padding: 80px 5vw;
+    }
+
+    .manifesto-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(26, 44, 30, 0.7) 0%, rgba(13, 26, 16, 0.9) 100%);
+      z-index: 0;
+    }
+
+    .manifesto-hero > * {
+      position: relative;
+      z-index: 1;
+    }
+
     .vision-body { grid-template-columns: 1fr; gap: 36px; }
     .vision-left { position: static; }
-    .profile-grid { grid-template-columns: 1fr 1fr; }
-    .geo-section { grid-template-columns: 1fr; }
+
+    .full-photo {
+      height: 360px;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .full-photo::after {
+      height: 160px;
+      background: linear-gradient(to top, var(--cream), transparent);
+    }
+
+    .profile-grid { grid-template-columns: 1fr; gap: 2px; }
+
+    .geo-section { grid-template-columns: 1fr; gap: 48px; padding: 80px 5vw; }
+
+    .scope-item {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      text-align: center;
+      padding: 24px 20px;
+    }
+
+    .scope-num { font-size: 2.5rem; opacity: 0.3; }
+
     .photo-pair { grid-template-columns: 1fr; height: auto; }
     .photo-pair-cell { height: 220px; }
+
+    .closing { padding: 80px 5vw; }
+
+    .closing::before { font-size: 35vw; }
+
     .promise-header-row { grid-template-columns: 1fr; gap: 24px; }
+
     .promise-grid { grid-template-columns: 1fr; }
+
+    .promise-section { padding: 80px 5vw; }
+
+    .profile-section { padding: 80px 5vw; }
+
+    .vision-body { padding: 80px 5vw; }
+
+    .promise-card { padding: 36px 24px; }
+
+    .profile-card { padding: 36px 20px; }
   }
