@@ -1272,6 +1272,7 @@ body {
     transform: rotate(0) translateY(-5px);
     box-shadow: 0 20px 45px rgba(184, 147, 90, 0.15);
   }
+}
 
   /* ==========================================
    ESTILOS DE 03_transparencia_alianzas.html
@@ -1543,20 +1544,33 @@ body {
   /* ── DONATION CTA ── */
   .donation-section {
     background: linear-gradient(135deg, #1a2c1e 0%, #0d1a0e 100%);
-    padding: 80px 7vw;
+    padding: 100px 7vw;
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 60px;
+    grid-template-columns: 1fr 320px;
+    gap: 80px;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .donation-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(184, 147, 90, 0.08) 0%, transparent 60%);
+    pointer-events: none;
   }
 
   .donation-text {
     font-family: var(--serif);
-    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
     font-weight: 300;
     font-style: italic;
     color: var(--white);
     line-height: 1.35;
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
   }
 
   .donation-text strong {
@@ -1566,29 +1580,85 @@ body {
   }
 
   .donation-info {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(184, 147, 90, 0.3);
-    padding: 32px 36px;
-    min-width: 260px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(184, 147, 90, 0.25);
+    border-radius: 4px;
+    padding: 40px 44px;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .donation-info:hover {
+    border-color: rgba(184, 147, 90, 0.5);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .donation-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .donation-info:hover::before {
+    opacity: 1;
   }
 
   .donation-info-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .donation-info-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
   }
 
   .donation-info-text {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.65);
-    line-height: 1.6;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
   }
 
   .donation-info-text strong {
     color: var(--white);
     font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .donation-section {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      text-align: center;
+    }
+
+    .donation-text {
+      max-width: 100%;
+    }
+
+    .donation-info {
+      padding: 32px;
+    }
+
+    .donation-info-label {
+      justify-content: center;
+    }
   }
 
   /* ── ALLIANCES ── */
