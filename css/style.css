@@ -726,6 +726,12 @@ body {
   .page-hero-bg {
     background-size: contain !important;
     background-repeat: no-repeat !important;
+    background-position: center top !important;
+  }
+
+  .page-hero-bg::after {
+    background: linear-gradient(180deg, transparent 60%, #0d1a0e 100%) !important;
+    opacity: 1 !important;
   }
 }
 
@@ -1266,7 +1272,6 @@ body {
     transform: rotate(0) translateY(-5px);
     box-shadow: 0 20px 45px rgba(184, 147, 90, 0.15);
   }
-}
 
   /* ==========================================
    ESTILOS DE 03_transparencia_alianzas.html
@@ -3214,7 +3219,6 @@ body {
       grid-template-columns: 1fr;
     }
   }
-}
 
   /* ==========================================
    PREMIUM UX/UI ENHANCEMENTS (GLOBAL)
