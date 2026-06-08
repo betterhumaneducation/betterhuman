@@ -1266,6 +1266,7 @@ body {
     transform: rotate(0) translateY(-5px);
     box-shadow: 0 20px 45px rgba(184, 147, 90, 0.15);
   }
+}
 
   /* ==========================================
    ESTILOS DE 03_transparencia_alianzas.html
@@ -3213,6 +3214,7 @@ body {
       grid-template-columns: 1fr;
     }
   }
+}
 
   /* ==========================================
    PREMIUM UX/UI ENHANCEMENTS (GLOBAL)
@@ -3378,3 +3380,4 @@ body {
   .social-icon:hover {
     box-shadow: 0 8px 24px rgba(184, 147, 90, 0.4);
   }
+}
