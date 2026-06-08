@@ -717,10 +717,16 @@ body {
   position: absolute;
   inset: 0;
   background-image: url('../img/2%20Resen%CC%83a%20Histo%CC%81rica/14.jpg') !important;
-  background-size: contain !important;
+  background-size: cover !important;
   background-position: center !important;
-  background-repeat: no-repeat !important;
   filter: brightness(1.3) contrast(1.1) !important;
+}
+
+@media (max-width: 768px) {
+  .page-hero-bg {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
 }
 
 .page-hero-bg::after {
