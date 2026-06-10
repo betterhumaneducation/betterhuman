@@ -1385,16 +1385,16 @@ body {
   overflow: hidden;
 }
 
-.page-hero-bg {
+.transparencia-hero-bg {
   position: absolute;
   inset: 0;
   background: linear-gradient(120deg, #1a1a18 0%, #0d1a0e 60%, #1a2c1e 100%);
-  background-image: url('../img/Transparencia%20y%20Alianzas/Hitube_djVryJoLEk_2026_05_16_21_32_54.jpg');
+  background-image: url('../img/Transparencia%20y%20Alianzas/1.jpg');
   background-size: cover;
   background-position: center;
 }
 
-.page-hero-bg::after {
+.transparencia-hero-bg::after {
   content: '';
   position: absolute;
   inset: 0;
