@@ -509,71 +509,24 @@ body {
   display: none;
 }
 
-/* ── FOOTER ── */
-.site-footer {
-  background: var(--ink);
-  padding: 60px 7vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer-copy {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--white);
-}
-
-.footer-socials {
-  display: flex;
-  gap: 16px;
-}
-
-.social-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  text-decoration: none;
-  transition: background 0.3s, transform 0.3s, color 0.3s;
-}
-
-.social-icon:hover {
-  background: var(--gold);
-  color: var(--ink);
-  transform: translateY(-4px);
-}
-
-.social-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
+  .hero {
+    height: 60vh !important;
+    min-height: 400px !important;
+  }
+
+  .hero-photo img {
+    object-position: 35% center !important;
+  }
+
+  .hero-content {
+    padding: 24px 5vw !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -607,102 +560,6 @@ body {
   }
 }
 
-/* ==========================================
-   ESTILOS DE 02_resena_historica.html
-   ========================================== */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --ink: #1a1a18;
-  --gold: #b8935a;
-  --gold-lt: #d4af7a;
-  --cream: #f7f3ee;
-  --stone: #e8e2d9;
-  --muted: #8a8074;
-  --white: #ffffff;
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --sans: 'Jost', sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--cream);
-  color: var(--ink);
-  font-family: var(--sans);
-  font-weight: 300;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-/* ── HEADER ── */
-.site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 7vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-
-.site-logo {
-  font-family: var(--serif);
-  font-size: 1.5rem;
-  color: var(--white);
-  text-decoration: none;
-  font-weight: 400;
-}
-
-.site-logo em {
-  color: var(--gold-lt);
-  font-style: italic;
-}
-
-.site-nav {
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-.site-nav a {
-  color: var(--white);
-  text-decoration: none;
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  transition: color 0.3s;
-}
-
-.site-nav a:hover {
-  color: var(--gold-lt);
-}
-
-@media (max-width: 900px) {
-  .site-header {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .site-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
 /* ── PAGE HERO ── */
 .page-hero {
   position: relative;
@@ -723,19 +580,23 @@ body {
 }
 
 @media (max-width: 768px) {
+  .page-hero {
+    height: 50vh;
+    min-height: 400px;
+  }
+
   .page-hero-bg {
     background-size: cover !important;
-    background-position: center center !important;
+    background-position: 30% center !important;
   }
 
   .page-hero-bg::after {
-    background: linear-gradient(180deg, rgba(26, 44, 30, 0.6) 0%, rgba(13, 26, 14, 0.8) 60%, rgba(26, 26, 24, 0.9) 100%) !important;
+    background: linear-gradient(180deg, rgba(26, 44, 30, 0.7) 0%, rgba(13, 26, 14, 0.85) 60%, rgba(26, 26, 24, 0.95) 100%) !important;
     opacity: 1 !important;
   }
 
   .page-hero-content {
     padding: 30px 24px;
-    border-radius: 0;
     max-width: 100%;
   }
 }
@@ -751,15 +612,6 @@ body {
 
 .page-hero-bg::before {
   display: none !important;
-}
-
-.page-hero-content {
-  position: relative;
-  z-index: 2;
-  padding: 40px 50px;
-  background: rgba(0, 0, 0, 0.45);
-  border-radius: 4px;
-  max-width: 800px;
 }
 
 .page-eyebrow {
@@ -1245,134 +1097,6 @@ body {
   .milestone-stats {
     grid-template-columns: 1fr 1fr;
   }
-
-  .tl-image {
-    margin-top: 24px;
-    display: inline-block;
-    padding: 10px;
-    background: var(--white);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-    border: 1px solid var(--stone);
-    border-radius: 2px;
-    transition: transform 0.4s ease;
-    max-width: 280px;
-  }
-
-  .tl-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    filter: sepia(0.2) contrast(1.1);
-  }
-
-  .timeline-item:nth-child(odd) .tl-image {
-    transform: rotate(-2deg);
-  }
-
-  .timeline-item:nth-child(even) .tl-image {
-    transform: rotate(2deg);
-  }
-
-  .tl-image:hover {
-    transform: rotate(0) translateY(-5px);
-    box-shadow: 0 20px 45px rgba(184, 147, 90, 0.15);
-  }
-}
-
-/* ==========================================
-   ESTILOS DE 03_transparencia_alianzas.html
-   ========================================== */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --ink: #1a1a18;
-  --gold: #b8935a;
-  --gold-lt: #d4af7a;
-  --cream: #f7f3ee;
-  --stone: #e8e2d9;
-  --muted: #8a8074;
-  --white: #ffffff;
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --sans: 'Jost', sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--cream);
-  color: var(--ink);
-  font-family: var(--sans);
-  font-weight: 300;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-/* ── HEADER ── */
-.site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 7vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-
-.site-logo {
-  font-family: var(--serif);
-  font-size: 1.5rem;
-  color: var(--white);
-  text-decoration: none;
-  font-weight: 400;
-}
-
-.site-logo em {
-  color: var(--gold-lt);
-  font-style: italic;
-}
-
-.site-nav {
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-.site-nav a {
-  color: var(--white);
-  text-decoration: none;
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  transition: color 0.3s;
-}
-
-.site-nav a:hover {
-  color: var(--gold-lt);
-}
-
-@media (max-width: 900px) {
-  .site-header {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .site-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }
 
 /* ── PAGE HERO ── */
@@ -1405,6 +1129,33 @@ body {
   position: relative;
   z-index: 2;
   padding: 0 7vw;
+  background: none;
+  border-radius: 0;
+  max-width: none;
+}
+
+/* Reseña: hero content with dark backdrop */
+.page-hero-bg ~ .page-hero-content {
+  padding: 40px 50px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 4px;
+  max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .page-hero-bg ~ .page-hero-content {
+    padding: 30px 24px;
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  .transparencia-hero-bg {
+    background-position: 35% center !important;
+  }
+
+  .transparencia-hero-bg::after {
+    background: linear-gradient(180deg, rgba(10, 14, 10, 0.8) 30%, rgba(10, 14, 10, 0.3) 100%) !important;
+  }
 }
 
 .page-eyebrow {
@@ -1820,79 +1571,8 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* ── FOOTER ── */
-.site-footer {
-  background: var(--ink);
-  padding: 60px 7vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer-copy {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--white);
-}
-
-.footer-socials {
-  display: flex;
-  gap: 16px;
-}
-
-.social-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  text-decoration: none;
-  transition: background 0.3s, transform 0.3s, color 0.3s;
-}
-
-.social-icon:hover {
-  background: var(--gold);
-  color: var(--ink);
-  transform: translateY(-4px);
-}
-
-.social-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-/* ── ANIMATIONS ── */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .page-hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-right {
-    height: 260px;
-  }
-
   .pillars-band {
     grid-template-columns: 1fr;
   }
@@ -1926,98 +1606,6 @@ body {
 /* ==========================================
    ESTILOS DE 04_mision.html
    ========================================== */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --ink: #1a1a18;
-  --gold: #b8935a;
-  --gold-lt: #d4af7a;
-  --cream: #f7f3ee;
-  --stone: #e8e2d9;
-  --muted: #8a8074;
-  --white: #ffffff;
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --sans: 'Jost', sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--cream);
-  color: var(--ink);
-  font-family: var(--sans);
-  font-weight: 300;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-/* ── HEADER ── */
-.site-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 7vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-
-.site-logo {
-  font-family: var(--serif);
-  font-size: 1.5rem;
-  color: var(--white);
-  text-decoration: none;
-  font-weight: 400;
-}
-
-.site-logo em {
-  color: var(--gold-lt);
-  font-style: italic;
-}
-
-.site-nav {
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-.site-nav a {
-  color: var(--white);
-  text-decoration: none;
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  transition: color 0.3s;
-}
-
-.site-nav a:hover {
-  color: var(--gold-lt);
-}
-
-@media (max-width: 900px) {
-  .site-header {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .site-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
 
 /* ── FULL SCREEN HERO ── */
 .hero {
@@ -2100,6 +1688,29 @@ body {
 .hero-mission strong {
   font-weight: 600;
   font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    min-height: 450px;
+  }
+
+  .hero-bg {
+    background-position: 40% center;
+  }
+
+  .hero-content {
+    padding: 0 5vw;
+  }
+
+  .hero-mission {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+  }
+
+  .hero-eyebrow {
+    font-size: 0.6rem;
+  }
 }
 
 /* Scroll indicator */
@@ -2445,69 +2056,6 @@ body {
   opacity: 0.6;
   line-height: 1.7;
   max-width: 380px;
-}
-
-/* ── FOOTER ── */
-.site-footer {
-  background: var(--ink);
-  padding: 60px 7vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.footer-copy {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--white);
-}
-
-.footer-socials {
-  display: flex;
-  gap: 16px;
-}
-
-.social-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  text-decoration: none;
-  transition: background 0.3s, transform 0.3s, color 0.3s;
-}
-
-.social-icon:hover {
-  background: var(--gold);
-  color: var(--ink);
-  transform: translateY(-4px);
-}
-
-.social-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* ── RESPONSIVE ── */
@@ -3263,6 +2811,12 @@ body {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
+  .manifesto-hero {
+    min-height: 60vh !important;
+    padding: 80px 5vw !important;
+    background-position: 35% center !important;
+  }
+
   .manifesto-hero::before {
     display: none;
   }
@@ -3274,6 +2828,11 @@ body {
 
   .vision-left {
     position: static;
+  }
+
+  .full-photo {
+    height: 240px;
+    background-position: center 20% !important;
   }
 
   .profile-grid {
