@@ -511,9 +511,28 @@ body {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
+  .site-header {
+    padding: 12px 5vw !important;
+    background: rgba(26, 26, 24, 0.88) !important;
+    gap: 8px !important;
+  }
+
+  .site-logo {
+    font-size: 1.1rem !important;
+  }
+
+  .site-nav {
+    gap: 14px !important;
+  }
+
+  .site-nav a {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.06em !important;
+  }
+
   .hero {
-    height: 60vh !important;
-    min-height: 400px !important;
+    height: 100vh !important;
+    min-height: 100svh !important;
   }
 
   .hero-photo img {
@@ -521,19 +540,104 @@ body {
   }
 
   .hero-content {
-    padding: 24px 5vw !important;
+    padding: 16px 5vw 20px !important;
     max-width: 100% !important;
     border-radius: 0 !important;
     margin: 0 !important;
+    bottom: 0 !important;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.55rem !important;
+    margin-bottom: 8px !important;
+    gap: 8px !important;
+  }
+
+  .hero-eyebrow::before {
+    width: 24px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 6vw, 2.2rem) !important;
+    max-width: 100% !important;
+    margin-bottom: 8px !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.78rem !important;
+    max-width: 100% !important;
+    margin-top: 8px !important;
+  }
+
+  .hero-cta {
+    margin-top: 12px !important;
+    padding: 8px 20px !important;
+    font-size: 0.65rem !important;
+  }
+
+  .section {
+    padding: 50px 5vw !important;
+  }
+
+  .section-label {
+    font-size: 0.6rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  .section-title {
+    font-size: clamp(1.4rem, 5vw, 1.8rem) !important;
+    max-width: 100% !important;
   }
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 24px;
+    padding: 50px 5vw !important;
+  }
+
+  .about-text .section-title {
+    font-size: clamp(1.3rem, 5vw, 1.7rem) !important;
+  }
+
+  .about-text p {
+    font-size: 0.88rem;
+    max-width: 100%;
+    margin-top: 16px !important;
+  }
+
+  .photo-frame {
+    aspect-ratio: 3/4 !important;
+  }
+
+  .photo-badge {
+    left: 0 !important;
+    bottom: 0 !important;
+    max-width: 140px !important;
+    font-size: 0.78rem !important;
+    padding: 10px 14px !important;
+    position: relative !important;
+    margin-top: -36px !important;
+    z-index: 2 !important;
+  }
+
+  .photo-accent {
+    display: none !important;
   }
 
   .programs-grid {
     grid-template-columns: 1fr;
+  }
+
+  .program-card {
+    padding: 24px 20px !important;
+  }
+
+  .program-name {
+    font-size: 1.2rem !important;
+  }
+
+  .program-desc {
+    font-size: 0.82rem !important;
   }
 
   .stats-bar {
@@ -541,22 +645,86 @@ body {
   }
 
   .stat {
+    padding: 16px 16px !important;
     border-right: none;
     border-bottom: 1px solid rgba(184, 147, 90, 0.15);
   }
 
+  .stat-number {
+    font-size: 1.6rem !important;
+  }
+
+  .stat-label {
+    font-size: 0.6rem !important;
+    margin-top: 4px !important;
+  }
+
   .gallery-strip {
     grid-template-columns: repeat(2, 1fr);
-    height: 240px;
+    height: 130px;
+  }
+
+  .quote-section {
+    padding: 50px 5vw 40px !important;
+  }
+
+  .quote-text {
+    font-size: clamp(1.1rem, 4vw, 1.4rem) !important;
+  }
+
+  .quote-source {
+    font-size: 0.6rem !important;
+    margin-top: 16px !important;
   }
 
   .recognition-banner {
     flex-direction: column;
     align-items: flex-start;
+    padding: 16px 5vw !important;
+    gap: 8px !important;
+  }
+
+  .recognition-label {
+    font-size: 0.55rem !important;
+  }
+
+  .recognition-text {
+    font-size: 0.85rem !important;
   }
 
   .recognition-divider {
     display: none;
+  }
+
+  .site-footer {
+    padding: 32px 5vw !important;
+    gap: 20px !important;
+  }
+
+  .footer-copy {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.1em !important;
+  }
+
+  .footer-socials {
+    gap: 12px !important;
+  }
+
+  .social-icon {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .social-icon svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .scroll-to-top {
+    width: 40px !important;
+    height: 40px !important;
+    bottom: 16px !important;
+    right: 16px !important;
   }
 }
 
@@ -581,8 +749,8 @@ body {
 
 @media (max-width: 768px) {
   .page-hero {
-    height: 50vh;
-    min-height: 400px;
+    height: 60vh;
+    min-height: 420px;
   }
 
   .page-hero-bg {
@@ -596,8 +764,29 @@ body {
   }
 
   .page-hero-content {
-    padding: 30px 24px;
-    max-width: 100%;
+    padding: 16px 5vw !important;
+    max-width: 100% !important;
+  }
+
+  .page-eyebrow {
+    font-size: 0.55rem !important;
+    margin-bottom: 8px !important;
+    gap: 8px !important;
+  }
+
+  .page-eyebrow::before {
+    width: 24px !important;
+  }
+
+  .page-title {
+    font-size: clamp(1.3rem, 5.5vw, 1.8rem) !important;
+    max-width: 100% !important;
+  }
+
+  .page-subtitle {
+    font-size: 0.78rem !important;
+    max-width: 100% !important;
+    margin-top: 8px !important;
   }
 }
 
@@ -1044,35 +1233,57 @@ body {
     transform: translateY(0);
   }
 }
-
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .intro-section {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 16px;
+    padding: 40px 5vw !important;
   }
 
   .intro-left {
     position: static;
   }
 
+  .section-title-sm {
+    font-size: 1.3rem !important;
+  }
+
+  .intro-body p {
+    font-size: 0.85rem !important;
+  }
+
+  .timeline-section {
+    padding: 50px 5vw !important;
+  }
+
+  .timeline-header {
+    margin-bottom: 32px !important;
+  }
+
+  .timeline-title {
+    font-size: clamp(1.3rem, 5vw, 1.6rem) !important;
+  }
+
   .timeline::before {
-    left: 20px;
+    left: 14px;
   }
 
   .timeline-item {
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 28px 1fr;
+    margin-bottom: 40px !important;
   }
 
   .timeline-item:nth-child(odd) .tl-content,
   .timeline-item:nth-child(even) .tl-content {
     grid-column: 2;
     text-align: left;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 12px;
     order: 2;
   }
 
   .timeline-item:nth-child(odd) .tl-empty,
+
   .timeline-item:nth-child(even) .tl-empty {
     display: none;
   }
@@ -1081,21 +1292,61 @@ body {
     grid-column: 1;
   }
 
+  .tl-dot-inner {
+    width: 10px !important;
+    height: 10px !important;
+    border-width: 3px !important;
+  }
+
+  .tl-year {
+    font-size: 1.2rem !important;
+  }
+
+  .tl-title {
+    font-size: 0.9rem !important;
+  }
+
+  .tl-text {
+    font-size: 0.78rem !important;
+  }
+
+  .tl-image {
+    max-width: 100% !important;
+  }
+
   .photo-row {
     grid-template-columns: 1fr;
     height: auto;
   }
 
   .photo-row-cell {
-    height: 200px;
+    height: 160px;
   }
 
   .milestone {
     grid-template-columns: 1fr;
+    padding: 40px 5vw !important;
+    gap: 20px !important;
+  }
+
+  .milestone-text {
+    font-size: clamp(1rem, 4vw, 1.3rem) !important;
   }
 
   .milestone-stats {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .ms-box {
+    padding: 14px 12px !important;
+  }
+
+  .ms-number {
+    font-size: 1.6rem !important;
+  }
+
+  .ms-label {
+    font-size: 0.6rem !important;
   }
 }
 
@@ -1144,9 +1395,9 @@ body {
 
 @media (max-width: 768px) {
   .page-hero-bg ~ .page-hero-content {
-    padding: 30px 24px;
+    padding: 16px 5vw !important;
     border-radius: 0;
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   .transparencia-hero-bg {
@@ -1400,20 +1651,26 @@ body {
 @media (max-width: 768px) {
   .donation-section {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 20px;
     text-align: center;
+    padding: 50px 5vw !important;
   }
 
   .donation-text {
     max-width: 100%;
+    font-size: clamp(1.1rem, 4vw, 1.3rem) !important;
   }
 
   .donation-info {
-    padding: 32px;
+    padding: 20px !important;
   }
 
   .donation-info-label {
     justify-content: center;
+  }
+
+  .donation-info-text {
+    font-size: 0.82rem !important;
   }
 }
 
@@ -1577,9 +1834,31 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .pillar {
+    padding: 18px 16px !important;
+  }
+
+  .pillar-num {
+    font-size: 1.4rem !important;
+  }
+
+  .pillar-name {
+    font-size: 0.7rem !important;
+    margin-top: 4px !important;
+  }
+
   .legal-section {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 16px;
+    padding: 50px 5vw !important;
+  }
+
+  .legal-title {
+    font-size: clamp(1.2rem, 4vw, 1.6rem) !important;
+  }
+
+  .legal-body p {
+    font-size: 0.85rem !important;
   }
 
   .donation-section {
@@ -1588,18 +1867,67 @@ body {
 
   .alliances-header {
     grid-template-columns: 1fr;
+    gap: 12px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .alliances-section {
+    padding: 50px 5vw !important;
+  }
+
+  .alliances-title {
+    font-size: clamp(1.2rem, 4vw, 1.6rem) !important;
+  }
+
+  .alliances-intro {
+    font-size: 0.85rem !important;
   }
 
   .alliances-grid {
     grid-template-columns: 1fr;
   }
 
+  .alliance-card {
+    padding: 22px 20px !important;
+  }
+
+  .alliance-name {
+    font-size: 1.1rem !important;
+  }
+
+  .alliance-desc {
+    font-size: 0.8rem !important;
+  }
+
   .sponsorship-section {
     grid-template-columns: 1fr;
+    padding: 50px 5vw !important;
+    gap: 24px !important;
+  }
+
+  .sp-label {
+    font-size: 0.6rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .sp-title {
+    font-size: clamp(1.2rem, 4vw, 1.6rem) !important;
+  }
+
+  .sp-body {
+    font-size: 0.85rem !important;
   }
 
   .sp-items {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .sp-item {
+    padding: 16px 12px !important;
+  }
+
+  .sp-item-name {
+    font-size: 0.7rem !important;
   }
 }
 
@@ -1692,24 +2020,36 @@ body {
 
 @media (max-width: 768px) {
   .hero {
-    height: 60vh;
-    min-height: 450px;
+    height: 75vh !important;
+    min-height: 480px !important;
   }
 
   .hero-bg {
-    background-position: 40% center;
+    background-position: 40% center !important;
   }
 
   .hero-content {
-    padding: 0 5vw;
-  }
-
-  .hero-mission {
-    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    padding: 0 5vw !important;
   }
 
   .hero-eyebrow {
-    font-size: 0.6rem;
+    font-size: 0.55rem !important;
+    gap: 8px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .hero-eyebrow::before,
+  .hero-eyebrow::after {
+    width: 16px !important;
+  }
+
+  .hero-mission {
+    font-size: clamp(1.15rem, 4.5vw, 1.5rem) !important;
+    max-width: 100% !important;
+  }
+
+  .scroll-hint {
+    display: none !important;
   }
 }
 
@@ -2062,15 +2402,54 @@ body {
 @media (max-width: 768px) {
   .mission-statement {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 12px;
+    padding: 40px 5vw !important;
   }
 
   .ms-numeral {
-    font-size: 5rem;
+    font-size: 3rem !important;
+  }
+
+  .ms-word {
+    font-size: 0.55rem !important;
+    margin-top: -6px !important;
+  }
+
+  .ms-headline {
+    font-size: clamp(1.15rem, 4vw, 1.4rem) !important;
+    margin-bottom: 16px !important;
+  }
+
+  .ms-body p {
+    font-size: 0.85rem !important;
+  }
+
+  .population-section {
+    padding: 40px 5vw !important;
+  }
+
+  .pop-header {
+    margin-bottom: 24px !important;
+  }
+
+  .pop-title {
+    font-size: clamp(1.2rem, 4vw, 1.5rem) !important;
   }
 
   .population-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pop-card {
+    padding: 20px 20px !important;
+  }
+
+  .pop-card-title {
+    font-size: 1.1rem !important;
+  }
+
+  .pop-card-text {
+    font-size: 0.8rem !important;
   }
 
   .photo-interlude {
@@ -2079,7 +2458,7 @@ body {
   }
 
   .photo-main {
-    height: 260px;
+    height: 200px;
   }
 
   .photo-aside {
@@ -2089,19 +2468,61 @@ body {
   }
 
   .photo-sm {
-    height: 160px;
+    height: 120px;
+  }
+
+  .principles-section {
+    padding: 50px 5vw !important;
   }
 
   .principles-header {
     grid-template-columns: 1fr;
+    gap: 12px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .pr-title {
+    font-size: clamp(1.15rem, 4vw, 1.5rem) !important;
+  }
+
+  .pr-intro {
+    font-size: 0.82rem !important;
   }
 
   .principles-list {
     grid-template-columns: 1fr;
   }
 
+  .principle-item {
+    padding: 22px 20px !important;
+  }
+
+  .principle-number {
+    font-size: 2.2rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .principle-name {
+    font-size: 1rem !important;
+  }
+
+  .principle-text {
+    font-size: 0.78rem !important;
+  }
+
   .family-section {
     grid-template-columns: 1fr;
+    gap: 16px !important;
+    padding: 40px 5vw !important;
+  }
+
+  .family-text {
+    font-size: clamp(1rem, 4vw, 1.2rem) !important;
+  }
+
+  .family-caption {
+    max-width: 100% !important;
+    font-size: 0.8rem !important;
   }
 }
 
@@ -2812,8 +3233,8 @@ body {
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .manifesto-hero {
-    min-height: 60vh !important;
-    padding: 80px 5vw !important;
+    min-height: 75vh !important;
+    padding: 80px 5vw 40px !important;
     background-position: 35% center !important;
   }
 
@@ -2821,26 +3242,118 @@ body {
     display: none;
   }
 
+  .hero-eyebrow {
+    font-size: 0.55rem !important;
+    gap: 8px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .hero-eyebrow::before {
+    width: 24px !important;
+  }
+
+  .hero-divider {
+    margin: 20px 0 !important;
+    width: 32px !important;
+  }
+
+  .vision-statement {
+    font-size: clamp(1.2rem, 5vw, 1.6rem) !important;
+    max-width: 100% !important;
+  }
+
+  .hero-body {
+    font-size: 0.8rem !important;
+    max-width: 100% !important;
+  }
+
   .vision-body {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 16px;
+    padding: 40px 5vw !important;
   }
 
   .vision-left {
     position: static;
   }
 
+  .vision-title {
+    font-size: clamp(1.15rem, 4vw, 1.5rem) !important;
+  }
+
+  .vision-right p {
+    font-size: 0.85rem !important;
+  }
+
   .full-photo {
-    height: 240px;
+    height: 160px;
     background-position: center 20% !important;
+  }
+
+  .profile-section {
+    padding: 40px 5vw !important;
+  }
+
+  .profile-header {
+    margin-bottom: 32px !important;
+  }
+
+  .profile-title {
+    font-size: clamp(1.2rem, 4vw, 1.5rem) !important;
   }
 
   .profile-grid {
     grid-template-columns: 1fr 1fr;
   }
 
+  .profile-card {
+    padding: 20px 12px !important;
+  }
+
+  .profile-attr {
+    font-size: 0.9rem !important;
+  }
+
+  .profile-desc {
+    font-size: 0.75rem !important;
+  }
+
   .geo-section {
     grid-template-columns: 1fr;
+    gap: 24px !important;
+    padding: 50px 5vw !important;
+  }
+
+  .geo-label {
+    font-size: 0.6rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .geo-title {
+    font-size: clamp(1.15rem, 4vw, 1.5rem) !important;
+  }
+
+  .geo-body {
+    max-width: 100% !important;
+    font-size: 0.82rem !important;
+  }
+
+  .scope-item {
+    padding: 16px 20px !important;
+    grid-template-columns: 44px 1fr !important;
+    gap: 12px !important;
+  }
+
+  .scope-num {
+    font-size: 1.5rem !important;
+  }
+
+  .scope-name {
+    font-size: 1rem !important;
+  }
+
+  .scope-desc {
+    font-size: 0.75rem !important;
   }
 
   .photo-pair {
@@ -2849,16 +3362,58 @@ body {
   }
 
   .photo-pair-cell {
-    height: 220px;
+    height: 160px;
+  }
+
+  .closing {
+    padding: 50px 5vw !important;
+  }
+
+  .closing-title {
+    font-size: clamp(1.3rem, 6vw, 1.8rem) !important;
+  }
+
+  .closing-sub {
+    font-size: 0.7rem !important;
+    margin-top: 16px !important;
+  }
+
+  .promise-section {
+    padding: 50px 5vw !important;
   }
 
   .promise-header-row {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 12px;
+  }
+
+  .promise-title {
+    font-size: clamp(1.2rem, 4vw, 1.5rem) !important;
+  }
+
+  .promise-intro {
+    font-size: 0.82rem !important;
   }
 
   .promise-grid {
     grid-template-columns: 1fr;
+    margin-top: 32px !important;
+  }
+
+  .promise-card {
+    padding: 24px 20px !important;
+  }
+
+  .promise-tag {
+    font-size: 0.6rem !important;
+  }
+
+  .promise-name {
+    font-size: 1.2rem !important;
+  }
+
+  .promise-text {
+    font-size: 0.8rem !important;
   }
 }
 
@@ -3026,4 +3581,173 @@ p {
 .social-icon:hover {
   box-shadow: 0 8px 24px rgba(184, 147, 90, 0.4);
 }
+
+/* ── EXTRA SMALL DEVICES (≤400px) ── */
+@media (max-width: 400px) {
+  .site-header {
+    padding: 10px 4vw !important;
+    gap: 6px !important;
+  }
+
+  .site-nav {
+    gap: 8px !important;
+  }
+
+  .site-nav a {
+    font-size: 0.5rem !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  .site-logo {
+    font-size: 0.95rem !important;
+  }
+
+  .hero-content {
+    padding: 12px 4vw 14px !important;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.5rem !important;
+    gap: 6px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .hero-eyebrow::before {
+    width: 18px !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.2rem, 7vw, 1.5rem) !important;
+    margin-bottom: 6px !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.72rem !important;
+    margin-top: 6px !important;
+  }
+
+  .hero-cta {
+    padding: 6px 16px !important;
+    font-size: 0.6rem !important;
+    margin-top: 8px !important;
+  }
+
+  .section {
+    padding: 36px 4vw !important;
+  }
+
+  .section-label {
+    font-size: 0.55rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .section-title {
+    font-size: clamp(1.2rem, 5vw, 1.4rem) !important;
+  }
+
+  .page-title {
+    font-size: clamp(1.1rem, 6vw, 1.4rem) !important;
+  }
+
+  .page-subtitle {
+    font-size: 0.72rem !important;
+  }
+
+  .stat {
+    padding: 12px 12px !important;
+  }
+
+  .stat-number {
+    font-size: 1.3rem !important;
+  }
+
+  .stat-label {
+    font-size: 0.55rem !important;
+  }
+
+  .gallery-strip {
+    height: 100px !important;
+  }
+
+  .photo-badge {
+    max-width: 120px !important;
+    font-size: 0.7rem !important;
+    padding: 8px 10px !important;
+  }
+
+  .program-card {
+    padding: 18px 14px !important;
+  }
+
+  .program-name {
+    font-size: 1rem !important;
+  }
+
+  .program-desc {
+    font-size: 0.75rem !important;
+  }
+
+  .quote-section {
+    padding: 32px 4vw !important;
+  }
+
+  .quote-text {
+    font-size: clamp(0.95rem, 4vw, 1.1rem) !important;
+  }
+
+  .recognition-text {
+    font-size: 0.78rem !important;
+  }
+
+  .site-footer {
+    padding: 24px 4vw !important;
+    gap: 16px !important;
+  }
+
+  .footer-copy {
+    font-size: 0.5rem !important;
+  }
+
+  .social-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .social-icon svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .scroll-to-top {
+    width: 36px !important;
+    height: 36px !important;
+    bottom: 12px !important;
+    right: 12px !important;
+  }
+
+  .vision-statement {
+    font-size: clamp(1rem, 5vw, 1.3rem) !important;
+  }
+
+  .hero-body {
+    font-size: 0.72rem !important;
+  }
+
+  .hero-mission {
+    font-size: clamp(0.95rem, 5vw, 1.2rem) !important;
+  }
+
+
+
+  .ms-numeral {
+    font-size: 2.2rem !important;
+  }
+
+  .profile-attr {
+    font-size: 0.8rem !important;
+  }
+
+  .profile-desc {
+    font-size: 0.7rem !important;
+  }
 }

@@ -13,6 +13,46 @@
   <style>
     .gallery-cell:hover img { transform: scale(1.05); }
     .hero-cta:hover { background: #b8935a; color: #1a1a18; }
+
+    /* Mobile refinements */
+    @media (max-width: 768px) {
+      .hero-content {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 16px 5vw 20px !important;
+        border-radius: 0 !important;
+      }
+      .hero-title {
+        font-size: clamp(1.5rem, 6vw, 2.2rem) !important;
+        margin-bottom: 8px !important;
+      }
+      .hero-subtitle {
+        font-size: 0.78rem !important;
+        margin-bottom: 16px !important;
+      }
+      .hero-eyebrow {
+        font-size: 0.55rem !important;
+        margin-bottom: 8px !important;
+        gap: 8px !important;
+      }
+      .hero-cta {
+        padding: 8px 20px !important;
+        font-size: 0.65rem !important;
+      }
+      .photo-badge {
+        left: 0 !important;
+        bottom: 0 !important;
+        position: relative !important;
+        margin-top: -36px !important;
+        z-index: 2 !important;
+        max-width: 140px !important;
+        font-size: 0.78rem !important;
+        padding: 10px 14px !important;
+      }
+      .photo-accent {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 
@@ -33,15 +73,15 @@
   <!-- ══ HERO ══ -->
   <section class="hero" style="position:relative;height:100vh;min-height:620px;overflow:hidden;background:#1a1a18;">
     <img src="img/1%20Inicio/11.jpg" alt="Better Human Education" style="width:100%;height:100%;object-fit:cover;display:block;">
-    <div class="hero-content" style="position:absolute;bottom:0;left:0;right:0;padding:40px 50px;z-index:2;color:white;background:rgba(0,0,0,0.45);border-radius:4px;max-width:800px;margin:0 auto 7vh;">
-      <div class="hero-eyebrow" style="display:inline-flex;align-items:center;gap:14px;color:#d4af7a;font-family:'Jost',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:20px;">Bogotá, Colombia · Desde 2002</div>
-      <h1 class="hero-title" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:300;line-height:1.08;letter-spacing:-0.01em;max-width:760px;margin-bottom:22px;">
+    <div class="hero-content" style="position:absolute;bottom:0;left:0;right:0;padding:32px 40px;z-index:2;color:white;background:rgba(0,0,0,0.45);border-radius:4px;max-width:800px;margin:0 auto 5vh;">
+      <div class="hero-eyebrow" style="display:inline-flex;align-items:center;gap:14px;color:#d4af7a;font-family:'Jost',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:16px;">Bogotá, Colombia · Desde 2002</div>
+      <h1 class="hero-title" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.2rem,6vw,5.5rem);font-weight:300;line-height:1.08;letter-spacing:-0.01em;max-width:760px;margin-bottom:16px;">
         Transformando vidas a través de la <em style="font-style:italic;color:#d4af7a;">educación integral</em>
       </h1>
-      <p class="hero-subtitle" style="font-size:1.05rem;color:rgba(255,255,255,0.65);max-width:480px;margin-bottom:36px;">
+      <p class="hero-subtitle" style="font-size:1rem;color:rgba(255,255,255,0.65);max-width:480px;margin-bottom:24px;">
         24 años acompañando a niños, niñas y jóvenes hacia un futuro con propósito, oportunidad y dignidad.
       </p>
-      <a href="#sobre-nosotros" class="hero-cta" style="display:inline-block;padding:14px 38px;border:1px solid #b8935a;color:#d4af7a;font-family:'Jost',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;">Conocer la fundación</a>
+      <a href="#sobre-nosotros" class="hero-cta" style="display:inline-block;padding:12px 32px;border:1px solid #b8935a;color:#d4af7a;font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;">Conocer la fundación</a>
     </div>
   </section>
 
