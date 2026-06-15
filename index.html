@@ -11,8 +11,14 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .gallery-cell:hover img { transform: scale(1.05); }
-    .hero-cta:hover { background: #b8935a; color: #1a1a18; }
+    .gallery-cell:hover img {
+      transform: scale(1.05);
+    }
+
+    .hero-cta:hover {
+      background: #b8935a;
+      color: #1a1a18;
+    }
 
     /* Mobile refinements */
     @media (max-width: 768px) {
@@ -22,23 +28,28 @@
         padding: 16px 5vw 20px !important;
         border-radius: 0 !important;
       }
+
       .hero-title {
         font-size: clamp(1.5rem, 6vw, 2.2rem) !important;
         margin-bottom: 8px !important;
       }
+
       .hero-subtitle {
         font-size: 0.78rem !important;
         margin-bottom: 16px !important;
       }
+
       .hero-eyebrow {
         font-size: 0.55rem !important;
         margin-bottom: 8px !important;
         gap: 8px !important;
       }
+
       .hero-cta {
         padding: 8px 20px !important;
         font-size: 0.65rem !important;
       }
+
       .photo-badge {
         left: 0 !important;
         bottom: 0 !important;
@@ -49,6 +60,7 @@
         font-size: 0.78rem !important;
         padding: 10px 14px !important;
       }
+
       .photo-accent {
         display: none !important;
       }
@@ -71,17 +83,24 @@
   </header>
 
   <!-- ══ HERO ══ -->
-  <section class="hero" style="position:relative;height:100vh;min-height:620px;overflow:hidden;background:#1a1a18;">
-    <img src="img/1%20Inicio/11.jpg" alt="Better Human Education" style="width:100%;height:100%;object-fit:cover;display:block;">
-    <div class="hero-content" style="position:absolute;bottom:0;left:0;right:0;padding:32px 40px;z-index:2;color:white;background:rgba(0,0,0,0.45);border-radius:4px;max-width:800px;margin:0 auto 5vh;">
-      <div class="hero-eyebrow" style="display:inline-flex;align-items:center;gap:14px;color:#d4af7a;font-family:'Jost',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:16px;">Bogotá, Colombia · Desde 2002</div>
-      <h1 class="hero-title" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.2rem,6vw,5.5rem);font-weight:300;line-height:1.08;letter-spacing:-0.01em;max-width:760px;margin-bottom:16px;">
-        Transformando vidas a través de la <em style="font-style:italic;color:#d4af7a;">educación integral</em>
+  <section class="hero" style="position:relative;height:100vh;min-height:620px;overflow:hidden;background:#0f0f11;">
+    <img src="img/1%20Inicio/11.jpg" alt="Better Human Education"
+      style="width:100%;height:100%;object-fit:cover;display:block;">
+    <!-- Overlay gradient -->
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(15,15,17,0.92) 0%, rgba(15,15,17,0.3) 60%, rgba(15,15,17,0.15) 100%);z-index:1;"></div>
+    <div class="hero-content"
+      style="position:absolute;bottom:0;left:0;right:0;padding:48px 7vw 7vh;z-index:2;color:white;max-width:900px;">
+      <div class="hero-eyebrow"
+        style="display:inline-flex;align-items:center;gap:14px;color:#e8c792;font-family:'Jost',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:20px;">
+        Bogotá, Colombia · Desde 2002</div>
+      <h1 class="hero-title"
+        style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.4rem,6vw,5.8rem);font-weight:300;line-height:1.05;letter-spacing:-0.02em;max-width:760px;margin-bottom:20px;color:#ffffff;">
+        Transformando vidas a través de la <em style="font-style:italic;color:#e8c792;">educación integral</em>
       </h1>
-      <p class="hero-subtitle" style="font-size:1rem;color:rgba(255,255,255,0.65);max-width:480px;margin-bottom:24px;">
+      <p class="hero-subtitle" style="font-size:1.05rem;color:rgba(255,255,255,0.6);max-width:500px;margin-bottom:32px;line-height:1.7;">
         24 años acompañando a niños, niñas y jóvenes hacia un futuro con propósito, oportunidad y dignidad.
       </p>
-      <a href="#sobre-nosotros" class="hero-cta" style="display:inline-block;padding:12px 32px;border:1px solid #b8935a;color:#d4af7a;font-family:'Jost',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;">Conocer la fundación</a>
+      <a href="#sobre-nosotros" class="hero-cta">Conocer la fundación</a>
     </div>
   </section>
 
@@ -92,7 +111,7 @@
       <span class="stat-label">Años de trayectoria</span>
     </div>
     <div class="stat">
-      <span class="stat-number">100s</span>
+      <span class="stat-number">500s</span>
       <span class="stat-label">Familias impactadas</span>
     </div>
     <div class="stat">
@@ -126,8 +145,11 @@
       <div class="photo-frame" style="width:100%;aspect-ratio:4/5;overflow:hidden;background:#2c3e2d;">
         <img src="img/1 Inicio/2.jpg" alt="" style="width:100%;height:100%;object-fit:contain;display:block;">
       </div>
-      <div class="photo-accent" style="position:absolute;bottom:-20px;right:-20px;width:120px;height:120px;border:1px solid #b8935a;opacity:0.4;z-index:-1;"></div>
-      <div class="photo-badge" style="position:absolute;bottom:24px;left:-24px;background:#b8935a;color:#1a1a18;padding:16px 22px;font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-weight:600;line-height:1.2;max-width:180px;">
+      <div class="photo-accent"
+        style="position:absolute;bottom:-20px;right:-20px;width:120px;height:120px;border:1px solid #b8935a;opacity:0.4;z-index:-1;">
+      </div>
+      <div class="photo-badge"
+        style="position:absolute;bottom:24px;left:-24px;background:#b8935a;color:#1a1a18;padding:16px 22px;font-family:'Cormorant Garamond',Georgia,serif;font-size:1rem;font-weight:600;line-height:1.2;max-width:180px;">
         Mención Honorífica<br>Antonia Santos<br>Congreso de la República
       </div>
     </div>
@@ -163,10 +185,14 @@
 
   <!-- ══ GALLERY STRIP ══ -->
   <div class="gallery-strip" style="display:grid;grid-template-columns:repeat(4,1fr);height:320px;gap:3px;">
-    <div class="gallery-cell" style="overflow:hidden;"><img src="img/1 Inicio/4..png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;"></div>
-    <div class="gallery-cell" style="overflow:hidden;"><img src="img/1 Inicio/5..png" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;"></div>
-    <div class="gallery-cell" style="overflow:hidden;"><img src="img/1 Inicio/6.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;"></div>
-    <div class="gallery-cell" style="overflow:hidden;"><img src="img/1%20Inicio/11.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;"></div>
+    <div class="gallery-cell" style="overflow:hidden;"><img src="img/1 Inicio/4..png" alt=""
+        style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;"></div>
+    <div class="gallery-cell" style="overflow:hidden;"><img src="img/1 Inicio/5..png" alt=""
+        style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;"></div>
+    <div class="gallery-cell" style="overflow:hidden;"><img src="img/1 Inicio/6.jpg" alt=""
+        style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;"></div>
+    <div class="gallery-cell" style="overflow:hidden;"><img src="img/1%20Inicio/11.jpg" alt=""
+        style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s;"></div>
   </div>
 
   <!-- ══ QUOTE ══ -->
@@ -222,7 +248,9 @@
 
   <!-- ══ SCROLL TO TOP ══ -->
   <button id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
-    <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h6v8h4v-8h6z"/></svg>
+    <svg viewBox="0 0 24 24">
+      <path d="M12 4l-8 8h6v8h4v-8h6z" />
+    </svg>
   </button>
 
   <script src="js/main.js"></script>
