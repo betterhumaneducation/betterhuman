@@ -17,8 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Seleccionamos automáticamente qué elementos van a tener este efecto de lujo
   const elementsToReveal = document.querySelectorAll(
-    '.program-card, .photo-frame, .pillar-card, .gallery-cell, .photo-row-cell, .ms-box, .stat, .timeline-item, .hero-content, .vision-statement'
+    '.program-card, .photo-frame, .pillar-card, .gallery-cell, .photo-row-cell, .ms-box, .stat, .timeline-item, .vision-statement'
   );
+
+  // Efecto especial para los contenidos de los hero (aparecer al hacer scroll)
+  const heroContents = document.querySelectorAll('.hero-content, .page-hero-content');
+  heroContents.forEach(heroContent => {
+    heroContent.classList.add('ux-reveal');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) {
+        heroContent.classList.add('ux-visible');
+      } else {
+        heroContent.classList.remove('ux-visible');
+      }
+    });
+  });
 
   // Aplicamos la clase base y un retraso dinámico (stagger) para que aparezcan en cascada
   elementsToReveal.forEach((el, index) => {
