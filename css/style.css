@@ -1367,7 +1367,7 @@ body {
   background: linear-gradient(120deg, #1a1a18 0%, #0d1a0e 60%, #1a2c1e 100%);
   background-image: url('../img/Transparencia%20y%20Alianzas/1.jpg');
   background-size: cover;
-  background-position: 40;
+  background-position: center 30%;
 }
 
 .transparencia-hero-bg::after {
@@ -1402,7 +1402,9 @@ body {
   }
 
   .transparencia-hero-bg {
-    background-position: 35% center !important;
+    background-size: auto 140% !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
   }
 
   .transparencia-hero-bg::after {
