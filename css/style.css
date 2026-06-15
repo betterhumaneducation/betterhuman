@@ -802,7 +802,9 @@ body {
   background-image: url('../img/2%20Resen%CC%83a%20Histo%CC%81rica/14.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
-  filter: brightness(1.3) contrast(1.1) !important;
+  filter: brightness(1.15) contrast(1.08) !important;
+  transform: scale(1.02);
+  transition: transform 8s ease;
 }
 
 @media (max-width: 768px) {
@@ -852,8 +854,13 @@ body {
   content: '' !important;
   position: absolute !important;
   inset: 0 !important;
-  background: linear-gradient(120deg, #1a2c1e 0%, #0d1a0e 60%, #1a1a18 100%) !important;
-  opacity: 0.25 !important;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 14, 10, 0.35) 0%,
+    rgba(10, 14, 10, 0.55) 60%,
+    rgba(10, 14, 10, 0.85) 100%
+  ) !important;
+  opacity: 1 !important;
   display: block !important;
 }
 
@@ -1064,14 +1071,15 @@ body {
 }
 
 .tl-dot-inner {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: var(--gold);
-  border: 4px solid var(--cream);
-  outline: 1px solid var(--gold);
+  border: 3px solid var(--cream);
+  outline: 2px solid var(--gold);
   flex-shrink: 0;
-  box-shadow: 0 0 0 4px rgba(184, 147, 90, 0.1);
+  box-shadow: 0 0 0 5px rgba(207, 168, 110, 0.15), 0 0 16px rgba(207, 168, 110, 0.3);
+  transition: var(--transition);
 }
 
 .tl-year {
@@ -1108,10 +1116,10 @@ body {
   display: inline-block;
   padding: 10px;
   background: var(--white);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--stone);
-  border-radius: 2px;
-  transition: transform 0.4s ease;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
   max-width: 280px;
 }
 
@@ -1119,20 +1127,21 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  filter: sepia(0.2) contrast(1.1);
+  filter: sepia(0.12) contrast(1.05);
+  border-radius: calc(var(--radius-sm) - 2px);
 }
 
 .timeline-item:nth-child(odd) .tl-image {
-  transform: rotate(-2deg);
+  transform: rotate(-1.5deg);
 }
 
 .timeline-item:nth-child(even) .tl-image {
-  transform: rotate(2deg);
+  transform: rotate(1.5deg);
 }
 
 .tl-image:hover {
-  transform: rotate(0) translateY(-5px);
-  box-shadow: 0 20px 45px rgba(184, 147, 90, 0.15);
+  transform: rotate(0) translateY(-8px);
+  box-shadow: 0 24px 50px rgba(207, 168, 110, 0.2);
 }
 
 /* ── PHOTO ROW ── */
@@ -1202,13 +1211,21 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
-  background: rgba(184, 147, 90, 0.2);
+  background: rgba(207, 168, 110, 0.15);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
 }
 
 .ms-box {
   background: rgba(255, 255, 255, 0.04);
-  padding: 32px 28px;
+  padding: 36px 28px;
   text-align: center;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.ms-box:hover {
+  background: rgba(207, 168, 110, 0.08);
 }
 
 .ms-number {
